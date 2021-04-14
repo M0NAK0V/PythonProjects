@@ -1,20 +1,20 @@
 def f(x):
-    a = x & 0b11111111111111
-    x >>= 14
-    a <<= 0
+    a = x & 0b1111111111
+    x >>= 10
+    a <<= 8
 
-    b = x & 0b1111111
-    x >>= 7
-    b <<= 25
+    b = x & 0b1111111111111
+    x >>= 13
+    b <<= 18
 
-    c = x & 0b111111111
-    x >>= 9
-    c <<= 14
+    c = x & 0b11111111
+    x >>= 8
+    c <<= 0
 
-    d = x & 0b11
-    x >>= 2
-    d <<= 23
-    return b | d | c | a
+    d = x & 0b1
+    x >>= 1
+    d <<= 31
+    return d | b | a | c
 
-print(hex(f(0x272f25e7)))
-print(hex(f(0xf15660af)))
+print(hex(f(0x4e18e80c)))
+print(hex(f(0x8e5c392d)))
