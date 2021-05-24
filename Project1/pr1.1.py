@@ -1,11 +1,11 @@
 import math
 def func(x, y, z):
-    first = 57*math.pow(y, 4) + math.sin(z)
-    second = 21*math.pow(y, 5) - 30*(math.pow(z, 2))
-    third = math.pow(z, 7) - 53*math.pow(y, 8)
-    fourth = math.pow(x, 4) - math.sin(z)
-    fifth = math.pow(y, 6) - (math.pow(x, 7))
-    result = first/second - third + fourth/fifth
+    first = math.pow(x, 8) + 20*math.pow(y, 2)
+    second = math.cos(z) + math.pow(z, 2) - 58
+    third = 34*math.pow(y, 6) + math.pow(y, 8)/76
+    fourth = x + math.log(z) - 67
+    fifth = math.tan(x) - y - 27
+    result = first/second - math.sqrt(third/fourth) - math.sqrt(fifth)
     return('%.2e' % result)
-print(func(15, 59, 39))
-print(func(-59, -54, 17))
+print(func(68, -91, 77))
+print(func(73, -95, 82))
